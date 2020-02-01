@@ -10,5 +10,5 @@
 
 [Codeaches Website]: https://codeaches.com
 
-[CircleCI badge]: https://circleci.com/gh/codeaches/embedded-activemq-artemis-jms-broker.svg?style=shield&circle-token=:circle-token
-[CircleCI]: https://circleci.com/gh/codeaches/embedded-activemq-artemis-jms-broker
+[CircleCI badge]: https://circleci.com/gh/codeaches/embedded-activemq-jms-auth-broker.svg?style=shield&circle-token=:circle-token
+[CircleCI]: https://circleci.com/gh/codeaches/embedded-activemq-jms-auth-broker

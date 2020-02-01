@@ -21,6 +21,9 @@ public class JmsEmbeddedBrokerConfig {
   @Value("${activemq.broker.url}")
   String brokerUrl;
 
+  @Value("${activemq.queue.name}")
+  String queue;
+
   @Bean
   BrokerService broker() throws Exception {
 
@@ -58,7 +61,7 @@ public class JmsEmbeddedBrokerConfig {
     entry1.setAdmin("admins");
     entry1.setRead("consumers");
     entry1.setWrite("producers");
-    entry1.setQueue("my-queue-x");
+    entry1.setQueue(queue);
 
     AuthorizationEntry entry2 = new AuthorizationEntry();
     entry2.setAdmin("admins");
