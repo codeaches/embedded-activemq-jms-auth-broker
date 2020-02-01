@@ -8,10 +8,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class JmsConsumer {
 
-    Logger log = LoggerFactory.getLogger(JmsConsumer.class);
+  Logger log = LoggerFactory.getLogger(JmsConsumer.class);
 
-    @JmsListener(destination = "${activemq.default-destination}")
-    public void receive(String message) {
-	log.info("Received message='{}'", message);
-    }
+  @JmsListener(destination = "${activemq.queue.name}")
+  public void receive(String message) {
+    log.info("Received message='{}'", message);
+  }
 }

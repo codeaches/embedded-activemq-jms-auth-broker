@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyRestController {
 
-    @Autowired
-    JmsProducer jmsProducer;
+  @Autowired
+  JmsProducer jmsProducer;
 
-    @PostMapping("/send")
-    public void sendDataToJms(@RequestParam String message) {
-	jmsProducer.send(message);
-    }
+  @PostMapping("/send")
+  public void sendDataToJms(@RequestParam String message) {
+    jmsProducer.send(message);
+  }
 }

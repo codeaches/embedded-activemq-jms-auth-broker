@@ -10,16 +10,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class JmsProducer {
 
-    Logger log = LoggerFactory.getLogger(JmsProducer.class);
+  Logger log = LoggerFactory.getLogger(JmsProducer.class);
 
-    @Autowired
-    private JmsTemplate jmsTemplate;
+  @Autowired
+  private JmsTemplate jmsTemplate;
 
-    @Value("${activemq.default-destination}")
-    String destination;
+  @Value("${activemq.queue.name}")
+  String destination;
 
-    public void send(String message) {
-	log.info("Sending message='{}'", message);
-	jmsTemplate.convertAndSend(destination, message);
-    }
+  public void send(String message) {
+    log.info("Sending message='{}'", message);
+    jmsTemplate.convertAndSend(destination, message);
+  }
 }
